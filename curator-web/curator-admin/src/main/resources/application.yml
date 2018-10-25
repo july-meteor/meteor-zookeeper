@@ -1,0 +1,12 @@
+# Tomcat 配置
+server:
+    tomcat:
+        max-threads: 10
+        min-spare-threads: 10
+    port: 7788
+
+
+
+
+
+
