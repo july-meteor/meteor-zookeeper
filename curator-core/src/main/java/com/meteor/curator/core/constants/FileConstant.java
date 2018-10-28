@@ -8,7 +8,7 @@ import org.apache.commons.lang.StringUtils;
 
 
 /**
- * Created by y747718944 on 2018/4/18 文件读取常量
+ *  Created by Meteor on 2018/4/18 文件读取常量
  */
 public class FileConstant {
     // 文件存放路径 win 下
@@ -17,7 +17,6 @@ public class FileConstant {
     public static final String FILE_ROOT_LINUX_PATH = getRootDir() + File.separator + ".zk";
     public static String FILE_ROOT_PATH = isWindows() ? FILE_ROOT_WIN_PATH : FILE_ROOT_LINUX_PATH;
     public static final String FILE_NAME = File.separator + "data.txt";
-    public static final String ZK_PATH_CONFIG = PathUtil.getClassesPath() + "zk.yml";
 
     public final static String OS_NAME = "os.name";
     /**

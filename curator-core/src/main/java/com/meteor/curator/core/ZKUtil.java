@@ -5,11 +5,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.meteor.curator.core.constants.ZKConstant;
+import com.meteor.curator.core.config.CuratorConfig;
 import com.meteor.curator.core.exception.ZKDataNullException;
 import com.meteor.curator.core.utils.ConvertUtil;
 import com.meteor.curator.core.utils.FileDefineUtil;
 import com.meteor.curator.core.pojo.ZKNode;
+import com.meteor.curator.core.utils.lib.StrUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.curator.CuratorConnectionLossException;
@@ -27,10 +28,16 @@ public class ZKUtil {
     private static final Logger logger = LoggerFactory.getLogger(ZKUtil.class);
 
 
+    static {
+        //初始化的时候删除本地缓存
+        FileDefineUtil.remove(null);
+    }
+
+
     public static ZKNode tree(String path) throws Exception {
         ZKNode root = null;
         if (StringUtils.isEmpty(path)) {
-            path = ZKConstant.ROOT_PATH;
+            path = CuratorConfig.ROOT_PATH;
         }
         CuratorFramework client = Initializer.getCuratorFramework();
         GetChildrenBuilder children = client.getChildren();
@@ -61,8 +68,10 @@ public class ZKUtil {
 
         for (String child_path : child_path_list) {
             ZKNode children_node = null;
-            if (StringUtils.equalsIgnoreCase(fullPath, ZKConstant.ROOT_PATH)) {
-                children_node = new ZKNode(child_path, fullPath + child_path);
+            if (StringUtils.equalsIgnoreCase(fullPath, CuratorConfig.ROOT_PATH)) {
+                //判断下是不是/作为根目录
+                String path = StrUtil.SLASH.equals(CuratorConfig.ROOT_PATH)?fullPath + child_path:fullPath +StrUtil.SLASH+child_path ;
+                children_node = new ZKNode(child_path, path);
                 buildTree(children, children_node);
             } else {
                 children_node = new ZKNode(child_path, fullPath + "/" + child_path);
@@ -98,8 +107,8 @@ public class ZKUtil {
         if (!add_cloud) {
             return path;
         }
-        if (!StringUtils.startsWithIgnoreCase(path, ZKConstant.ROOT_PATH)) {
-            path = ZKConstant.ROOT_PATH + path;
+        if (!StringUtils.startsWithIgnoreCase(path, CuratorConfig.ROOT_PATH)) {
+            path = CuratorConfig.ROOT_PATH + path;
         }
         return path;
     }

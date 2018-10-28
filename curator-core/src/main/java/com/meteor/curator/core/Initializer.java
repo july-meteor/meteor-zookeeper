@@ -1,7 +1,7 @@
 package com.meteor.curator.core;
 
 import com.meteor.curator.core.constants.FileConstant;
-import com.meteor.curator.core.constants.ZKConstant;
+import com.meteor.curator.core.config.CuratorConfig;
 import com.meteor.curator.core.exception.ZKServerConnectionException;
 import com.meteor.curator.core.listener.TreeListenter;
 import com.meteor.curator.core.utils.FileDefineUtil;
@@ -36,13 +36,13 @@ public class Initializer {
 	private static void init() throws ZKServerConnectionException {
 		// 配置日志在初始化的时候加载
 		logger.info("zkdata 本地保存路径: {}", FileConstant.FILE_ROOT_PATH);
-		logger.info("zk.yml路径: {}", FileConstant.ZK_PATH_CONFIG);
+//		logger.info("zk.yml路径: {}", FileConstant.ZK_PATH_CONFIG);
 		try{
 			FileDefineUtil.remove(null);}catch (Exception e){logger.warn(e.getMessage());}
 		// 初始化连接
-		RetryPolicy retryPolicy = new RetryNTimes(ZKConstant.RETRY_CONN_COUNT, ZKConstant.RETRY_CONN_INTERVAL);
-		curatorFramework = CuratorFrameworkFactory.newClient(ZKConstant.ZK_SERVERS,
-				ZKConstant.DEFAULT_SESSION_TIMEOUT_MS, ZKConstant.DEFAULT_CONNECTION_TIMEOUT_MS, retryPolicy);
+		RetryPolicy retryPolicy = new RetryNTimes(CuratorConfig.RETRY_CONN_COUNT, CuratorConfig.RETRY_CONN_INTERVAL);
+		curatorFramework = CuratorFrameworkFactory.newClient(CuratorConfig.ZK_SERVERS,
+				CuratorConfig.DEFAULT_SESSION_TIMEOUT_MS, CuratorConfig.DEFAULT_CONNECTION_TIMEOUT_MS, retryPolicy);
 		curatorFramework.start();
 
 		// 初始化监听
