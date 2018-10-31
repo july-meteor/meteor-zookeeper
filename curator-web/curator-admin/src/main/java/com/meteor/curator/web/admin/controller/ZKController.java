@@ -102,10 +102,9 @@ public class ZKController {
                 log.info("切换Zookeeper服务 旧地址：{}  ，新地址：{}", CuratorConfig.ZK_SERVERS, server);
                 CuratorConfig.ZK_SERVERS = server;
                 Initializer.reInit();//手动重启
-                resp.setData("success");
+                resp.setRel(true);
             } else {
-                resp.setData("error");
-                resp.setMessage("错误地址！");
+                resp.setRel(false);
             }
         } catch (Exception e) {//会出现一个连接异常，不需要处理
 

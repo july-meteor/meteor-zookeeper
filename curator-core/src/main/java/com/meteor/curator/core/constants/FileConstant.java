@@ -17,7 +17,8 @@ public class FileConstant {
     public static final String FILE_ROOT_LINUX_PATH = getRootDir() + File.separator + ".zk";
     public static String FILE_ROOT_PATH = isWindows() ? FILE_ROOT_WIN_PATH : FILE_ROOT_LINUX_PATH;
     public static final String FILE_NAME = File.separator + "data.txt";
-
+    //读取Meteor-curator的文件配置
+    public static final String ZK_PATH_CONFIG = PathUtil.getClassesPath() + "meteor.yml";
     public final static String OS_NAME = "os.name";
     /**
      * 规定路径 参数为root.dir = 程序根目录， 如果找不到在使用 user.dir
