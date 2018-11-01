@@ -1,6 +1,6 @@
 <p align="center">
 
-  # Meteor-curator-ui
+  # Meteor-curator
   
 </p>
 
