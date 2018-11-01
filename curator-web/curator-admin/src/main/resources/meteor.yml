@@ -1,4 +1,4 @@
-servers: localhost:2181
+servers: 111.230.210.81:2181
 rootPath: /cloud
 listener:
           - /cloud
