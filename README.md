@@ -41,7 +41,7 @@ Meteor-zookeeper</h1>
   - [Meteor-zookeeper-admin](https://github.com/18106960985/meteor-zookeeper-admin)
 - [Gitee](https://gitee.com/y747718944/meteor-curator) 码云地址
   - [Meteor-zookeeper](https://gitee.com/y747718944/meteor-curator)
-  - [Meteor-zookeeper-admin](https://gitee.com/y747718944/meteor-zookeeper-admin)
+  - [Meteor-zookeeper-admin](https://gitee.com/y747718944/meteor-curator-admin)
 
 
 
