@@ -1,5 +1,8 @@
+
 <p align="center">
-   #Meteor-zookeeper ![Meteor-zookeeper](doc/favicon.ico)
+ <h1> <img width="45px" src="https://img-blog.csdnimg.cn/20181109170115221.jpg">
+Meteor-zookeeper</h1>
+
 </p>
 
 <p align="center">
@@ -56,6 +59,7 @@
    =。=目前该项目已经满足了公司的使用，所以具体需要升级什么还请有需要的私信我。
 
 ##功能说明
+
 - Zookeeper-code
   - **服务连接**  支持单zookeeper或是集群
   - **数据存储数据转换** 目前支持 string,list,map,yml,Properties,bean转化
@@ -77,9 +81,8 @@
 ## 系统架构图
 
  <p align="center">
-  ![系统架构图](https://img-blog.csdnimg.cn/20181101162041302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE2ODgyMDcz,size_16,color_FFFFFF,t_70 )
+   <img width="900" src="https://img-blog.csdnimg.cn/20181101162041302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE2ODgyMDcz,size_16,color_FFFFFF,t_70 ">
 </p>
-
  <p align="center">
   <img width="900" src="https://img-blog.csdnimg.cn/20181101163654155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE2ODgyMDcz,size_16,color_FFFFFF,t_70">
 </p>
