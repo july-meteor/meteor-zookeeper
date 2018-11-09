@@ -5,16 +5,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.meteor</groupId>
-  <artifactId>meteor-curator</artifactId>
+  <artifactId>meteor-zookeeper</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
+    <module>zookeeper-web</module>
+    <module>zookeeper-core</module>
 
-    <module>curator-core</module>
-    <module>curator-web</module>
   </modules>
 
-  <name>meteor-curator</name>
+  <name>meteor-zookeeper</name>
   <url>http://www.example.com</url>
 
   <properties>
