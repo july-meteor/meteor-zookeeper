@@ -189,7 +189,7 @@ npm run build:prod
 #这是为了开发分离，部署合并
 ```
 
-
+另介绍一个有意思的项目,关于足球赔率数据爬虫分析一体化的项目 https://github.com/monomania/foot
 
 ## Browsers support
 
