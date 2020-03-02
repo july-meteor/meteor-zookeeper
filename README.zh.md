@@ -36,6 +36,8 @@ Meteor-zookeeper</h1>
 - [Meteor-zookeeper-web](https://github.com/18106960985/meteor-zookeeper)不光是  [Meteor-zookeeper-core](https://github.com/18106960985/meteor-zookeeper)的一个小示例，它为 [Meteor-zookeeper-core](https://github.com/18106960985/meteor-curator)提供了可视化操作，给使用者更舒服的体验。
 - [Meteor-zookeeper-admin](https://github.com/18106960985/meteor-zookeeper-admin) 前端采用[vue-element-ui](https://github.com/PanJiaChen/vue-element-admin)  这里就不做更多阐述，在需要自定义UI的情况下请自行查看该项目说明
 
+- 另介绍一个有意思的项目,关于足球赔率数据爬虫分析一体化的项目 https://github.com/monomania/foot
+
 - [在线访问](http://111.230.210.81:7788/)
 - [使用文档](https://blog.csdn.net/qq_16882073/article/details/83622399) 
 - [Github](https://github.com/18106960985/meteor-zookeeper) 
@@ -189,7 +191,6 @@ npm run build:prod
 #这是为了开发分离，部署合并
 ```
 
-另介绍一个有意思的项目,关于足球赔率数据爬虫分析一体化的项目 https://github.com/monomania/foot
 
 ## Browsers support
 
