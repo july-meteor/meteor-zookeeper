@@ -16,7 +16,7 @@
     <properties>
         <!--Main路径-->
         <main.class>com.meteor.zookeeper.web.admin.MeteorCuratorApplication</main.class>
-        <springboot.version>1.5.4.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
     </properties>
 
     <dependencies>
